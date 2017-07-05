@@ -57,3 +57,5 @@
     * [黑板模式](extend/blackboard.md)
     * [空对象模式](extend/null.md)
     * [事件模式](extend/event.md)
+    * [过滤器](extend/filter.md)
+    * [core/plugin架构](extend-core-plugin.md)
