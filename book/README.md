@@ -17,6 +17,8 @@
   * [代理模式](framework/proxy.md)
   * [装饰模式](framework/decorator.md)
   * [适配器模式](framework/adapter.md)
+    * [对象适配器](framework/object-adapter.md)
+    * [类适配器](framework/class-adapter.md)
   * [组合模式](framework/composite.md)
   * [外观模式](framework/facade.md)
   * [享元模式](framework/flyweight.md)
