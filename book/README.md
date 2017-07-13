@@ -1,5 +1,6 @@
 # 设计模式
 
+* [目录](README.md)
 * [设计原则](principle/README.md)
   * [单一职责原则](principle/srp.md)
   * [里氏替换原则](principle/lsp.md)
@@ -46,6 +47,9 @@
   * [观察中介模式](group/observer-mediator.md)
 * [扩展](extend/README.md)
   * [MVC框架](extend/mvc.md)
+  * [HMVC框架](extend/hmvc.md)
+  * [MVP框架](extend/mvp.md)
+  * [MVVM框架](extend/mvvm.md)
   * [新模式](extend/new.md)
     * [规格模式](extend/specifications.md)
     * [对象池模式](extend/objects.md)
@@ -53,3 +57,8 @@
     * [黑板模式](extend/blackboard.md)
     * [空对象模式](extend/null.md)
     * [事件模式](extend/event.md)
+    * [过滤器](extend/filter.md)
+    * [core/plugin架构](extend/core-plugin.md)
+    * [AOP思想](extend/aop.md)
+    * [面向接口编程](extend/oip.md)
+    * [OOP思想](extend/oop.md)
