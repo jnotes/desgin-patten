@@ -62,3 +62,5 @@
     * [AOP思想](extend/aop.md)
     * [面向接口编程](extend/oip.md)
     * [OOP思想](extend/oop.md)
+* [UML](uml.md)
+* [其他](other.md)
