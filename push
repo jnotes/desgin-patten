@@ -1,2 +1,3 @@
 #!/bin/bash
+rm -rf ./docs
 cp -R ./book/_book ./docs

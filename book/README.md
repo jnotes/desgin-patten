@@ -10,6 +10,7 @@
   * [开闭原则](principle/ocp.md)
 * [创建类模式](creater/README.md)
   * [单例模式](creater/singleton.md)
+  * [简单工厂](creater/simple-factory.md)
   * [工厂方法](creater/factory-method.md)
   * [抽象工厂模式](creater/abstract-factory.md)
   * [建造者模式](creater/builder.md)
