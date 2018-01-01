@@ -1,5 +1,7 @@
 # 设计模式
 
+[![Build Status](https://travis-ci.org/jnotes/desgin-patten.svg?branch=master)](https://travis-ci.org/jnotes/desgin-patten)
+
 * [目录](README.md)
 * [设计原则](principle/README.md)
   * [单一职责原则](principle/srp.md)
