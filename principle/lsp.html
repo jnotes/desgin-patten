@@ -1,0 +1,1179 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>里氏替换原则 · 设计模式</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="dip.html" />
+    
+    
+    <link rel="prev" href="srp.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    设计原则
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="srp.html">
+            
+                <a href="srp.html">
+            
+                    
+                    单一职责原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.2" data-path="lsp.html">
+            
+                <a href="lsp.html">
+            
+                    
+                    里氏替换原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="dip.html">
+            
+                <a href="dip.html">
+            
+                    
+                    依赖倒置原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="isp.html">
+            
+                <a href="isp.html">
+            
+                    
+                    接口隔离原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="lod.html">
+            
+                <a href="lod.html">
+            
+                    
+                    迪米特法则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="ocp.html">
+            
+                <a href="ocp.html">
+            
+                    
+                    开闭原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="carp.html">
+            
+                <a href="carp.html">
+            
+                    
+                    组合/聚合复用原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../creater/">
+            
+                <a href="../creater/">
+            
+                    
+                    创建类模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../creater/singleton.html">
+            
+                <a href="../creater/singleton.html">
+            
+                    
+                    单例模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../creater/simple-factory.html">
+            
+                <a href="../creater/simple-factory.html">
+            
+                    
+                    简单工厂
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../creater/factory-method.html">
+            
+                <a href="../creater/factory-method.html">
+            
+                    
+                    工厂方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../creater/abstract-factory.html">
+            
+                <a href="../creater/abstract-factory.html">
+            
+                    
+                    抽象工厂模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../creater/builder.html">
+            
+                <a href="../creater/builder.html">
+            
+                    
+                    建造者模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../creater/prototype.html">
+            
+                <a href="../creater/prototype.html">
+            
+                    
+                    原型模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../framework/">
+            
+                <a href="../framework/">
+            
+                    
+                    结构类模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../framework/proxy.html">
+            
+                <a href="../framework/proxy.html">
+            
+                    
+                    代理模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../framework/decorator.html">
+            
+                <a href="../framework/decorator.html">
+            
+                    
+                    装饰模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../framework/adapter.html">
+            
+                <a href="../framework/adapter.html">
+            
+                    
+                    适配器模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../framework/object-adapter.html">
+            
+                <a href="../framework/object-adapter.html">
+            
+                    
+                    对象适配器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../framework/class-adapter.html">
+            
+                <a href="../framework/class-adapter.html">
+            
+                    
+                    类适配器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../framework/composite.html">
+            
+                <a href="../framework/composite.html">
+            
+                    
+                    组合模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../framework/facade.html">
+            
+                <a href="../framework/facade.html">
+            
+                    
+                    外观模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../framework/flyweight.html">
+            
+                <a href="../framework/flyweight.html">
+            
+                    
+                    享元模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../framework/bridge.html">
+            
+                <a href="../framework/bridge.html">
+            
+                    
+                    桥接模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../behavior/">
+            
+                <a href="../behavior/">
+            
+                    
+                    行为类模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../behavior/template-method.html">
+            
+                <a href="../behavior/template-method.html">
+            
+                    
+                    模板方法模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../behavior/mediator.html">
+            
+                <a href="../behavior/mediator.html">
+            
+                    
+                    中介者模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../behavior/command.html">
+            
+                <a href="../behavior/command.html">
+            
+                    
+                    命令模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../behavior/chain-of-responsibility.html">
+            
+                <a href="../behavior/chain-of-responsibility.html">
+            
+                    
+                    责任链模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../behavior/strategy.html">
+            
+                <a href="../behavior/strategy.html">
+            
+                    
+                    策略模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../behavior/iterator.html">
+            
+                <a href="../behavior/iterator.html">
+            
+                    
+                    迭代器模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../behavior/observer.html">
+            
+                <a href="../behavior/observer.html">
+            
+                    
+                    观察者模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../behavior/memento.html">
+            
+                <a href="../behavior/memento.html">
+            
+                    
+                    备忘录模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../behavior/visitor.html">
+            
+                <a href="../behavior/visitor.html">
+            
+                    
+                    访问者模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../behavior/state.html">
+            
+                <a href="../behavior/state.html">
+            
+                    
+                    状态模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../behavior/interpreter.html">
+            
+                <a href="../behavior/interpreter.html">
+            
+                    
+                    解释器模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../comparison/">
+            
+                <a href="../comparison/">
+            
+                    
+                    设计模式对比
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../comparison/creater.html">
+            
+                <a href="../comparison/creater.html">
+            
+                    
+                    创建类模式对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../comparison/framework.html">
+            
+                <a href="../comparison/framework.html">
+            
+                    
+                    结构类模式对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../comparison/behavior.html">
+            
+                <a href="../comparison/behavior.html">
+            
+                    
+                    行为类模式对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../comparison/mixed.html">
+            
+                <a href="../comparison/mixed.html">
+            
+                    
+                    混合对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../group/">
+            
+                <a href="../group/">
+            
+                    
+                    设计模式组合
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../group/command-cor.html">
+            
+                <a href="../group/command-cor.html">
+            
+                    
+                    命令责任链模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../group/factory-strategy.html">
+            
+                <a href="../group/factory-strategy.html">
+            
+                    
+                    工厂策略模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../group/observer-mediator.html">
+            
+                <a href="../group/observer-mediator.html">
+            
+                    
+                    观察中介模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../extend/">
+            
+                <a href="../extend/">
+            
+                    
+                    扩展
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../extend/mvc.html">
+            
+                <a href="../extend/mvc.html">
+            
+                    
+                    MVC框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../extend/hmvc.html">
+            
+                <a href="../extend/hmvc.html">
+            
+                    
+                    HMVC框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../extend/mvp.html">
+            
+                <a href="../extend/mvp.html">
+            
+                    
+                    MVP框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../extend/mvvm.html">
+            
+                <a href="../extend/mvvm.html">
+            
+                    
+                    MVVM框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../extend/new.html">
+            
+                <a href="../extend/new.html">
+            
+                    
+                    新模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.5.1" data-path="../extend/specifications.html">
+            
+                <a href="../extend/specifications.html">
+            
+                    
+                    规格模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5.2" data-path="../extend/objects.html">
+            
+                <a href="../extend/objects.html">
+            
+                    
+                    对象池模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5.3" data-path="../extend/hire.html">
+            
+                <a href="../extend/hire.html">
+            
+                    
+                    雇佣模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5.4" data-path="../extend/blackboard.html">
+            
+                <a href="../extend/blackboard.html">
+            
+                    
+                    黑板模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5.5" data-path="../extend/null.html">
+            
+                <a href="../extend/null.html">
+            
+                    
+                    空对象模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5.6" data-path="../extend/event.html">
+            
+                <a href="../extend/event.html">
+            
+                    
+                    事件模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5.7" data-path="../extend/filter.html">
+            
+                <a href="../extend/filter.html">
+            
+                    
+                    过滤器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5.8" data-path="../extend/core-plugin.html">
+            
+                <a href="../extend/core-plugin.html">
+            
+                    
+                    core/plugin架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5.9" data-path="../extend/aop.md">
+            
+                <span>
+            
+                    
+                    AOP思想
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5.10" data-path="../extend/oip.html">
+            
+                <a href="../extend/oip.html">
+            
+                    
+                    面向接口编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5.11" data-path="../extend/oop.md">
+            
+                <span>
+            
+                    
+                    OOP思想
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5.12" data-path="../extend/module.html">
+            
+                <a href="../extend/module.html">
+            
+                    
+                    模块化开发思想
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../uml.html">
+            
+                <a href="../uml.html">
+            
+                    
+                    UML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../other.html">
+            
+                <a href="../other.html">
+            
+                    
+                    其他
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >里氏替换原则</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x91CC;&#x6C0F;&#x66FF;&#x6362;&#x539F;&#x5219;">&#x91CC;&#x6C0F;&#x66FF;&#x6362;&#x539F;&#x5219;</h1>
+<blockquote>
+<p>&#x6240;&#x6709;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7236;&#x7C7B;&#x7684;&#x5730;&#x65B9;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5B50;&#x7C7B;&#x8FDB;&#x884C;&#x66FF;&#x6362;&#x3002;</p>
+</blockquote>
+<p>&#x5728;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x8BED;&#x8A00;&#x4E2D;&#xFF0C;&#x7EE7;&#x627F;&#x662F;&#x5FC5;&#x4E0D;&#x53EF;&#x5C11;&#x7684;&#x3001;&#x975E;&#x5E38;&#x4F18;&#x79C0;&#x7684;&#x8BED;&#x8A00;&#x673A;&#x5236;&#xFF0C;&#x5B83;&#x6709;&#x5982;&#x4E0B;&#x4F18;&#x70B9;&#xFF1A;</p>
+<ul>
+<li>&#x4EE3;&#x7801;&#x5171;&#x4EAB;&#xFF0C;&#x51CF;&#x5C11;&#x521B;&#x5EFA;&#x7C7B;&#x7684;&#x5DE5;&#x4F5C;&#x91CF;&#xFF0C;&#x6BCF;&#x4E2A;&#x5B50;&#x7C7B;&#x90FD;&#x62E5;&#x6709;&#x7236;&#x7C7B;&#x7684;&#x65B9;&#x6CD5;&#x548C;&#x5C5E;&#x6027;&#x3002;</li>
+<li>&#x63D0;&#x9AD8;&#x4EE3;&#x7801;&#x7684;&#x91CD;&#x7528;&#x6027;&#x3002;</li>
+<li>&#x5B50;&#x7C7B;&#x53EF;&#x4EE5;&#x5F62;&#x4F3C;&#x7236;&#x7C7B;&#xFF0C;&#x4F46;&#x53C8;&#x5F02;&#x4E8E;&#x7236;&#x7C7B;&#x3002;</li>
+<li>&#x63D0;&#x9AD8;&#x4EE3;&#x7801;&#x7684;&#x53EF;&#x6269;&#x5C55;&#x6027;&#x3002;</li>
+<li>&#x63D0;&#x9AD8;&#x4EA7;&#x54C1;&#x6216;&#x9879;&#x76EE;&#x7684;&#x5F00;&#x653E;&#x6027;&#x3002;</li>
+</ul>
+<p>&#x7EE7;&#x627F;&#x7684;&#x7F3A;&#x70B9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li>&#x7EE7;&#x627F;&#x662F;&#x4FB5;&#x5165;&#x6027;&#x7684;&#xFF0C;&#x53EA;&#x8981;&#x7EE7;&#x627F;&#xFF0C;&#x5C31;&#x5FC5;&#x987B;&#x62E5;&#x6709;&#x7236;&#x7C7B;&#x7684;&#x6240;&#x6709;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#x3002;</li>
+<li>&#x964D;&#x4F4E;&#x4EE3;&#x7801;&#x7684;&#x7075;&#x6D3B;&#x6027;&#x3002;</li>
+<li>&#x589E;&#x5F3A;&#x4E86;&#x8026;&#x5408;&#x6027;&#x3002;&#x5F53;&#x7236;&#x7C7B;&#x7684;&#x5E38;&#x91CF;&#x3001;&#x53D8;&#x91CF;&#x548C;&#x65B9;&#x6CD5;&#x88AB;&#x4FEE;&#x6539;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x8003;&#x8651;&#x5B50;&#x7C7B;&#x7684;&#x4FEE;&#x6539;&#xFF0C;&#x800C;&#x4E14;&#x5728;&#x7F3A;&#x4E4F;&#x89C4;&#x8303;&#x7684;&#x73AF;&#x5883;&#x4E0B;&#xFF0C;&#x8FD9;&#x79CD;&#x4FEE;&#x6539;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x4EE3;&#x7801;&#x91CD;&#x6784;&#x3002;</li>
+</ul>
+<blockquote>
+<p>&#x5982;&#x4F55;&#x8BA9;&#x7EE7;&#x627F;&#x7684;&#x5229;&#x5927;&#x4E8E;&#x5F0A;&#xFF0C;&#x89E3;&#x51B3;&#x7684;&#x65B9;&#x6848;&#x662F;&#x5F15;&#x5165;&#x91CC;&#x6C0F;&#x66FF;&#x6362;&#x539F;&#x5219;&#x3002;</p>
+</blockquote>
+<p>&#x91CC;&#x6C0F;&#x66FF;&#x6362;&#x539F;&#x5219;(LSP)&#x7684;&#x5B9A;&#x4E49;&#xFF1A;</p>
+<ul>
+<li>&#x4E25;&#x683C;&#x7684;&#x5B9A;&#x4E49;&#xFF1A;&#x5982;&#x679C;&#x5BF9;&#x6BCF;&#x4E00;&#x4E2A;&#x7C7B;&#x578B;&#x4E3A;T1&#x7684;&#x5BF9;&#x8C61;o1&#xFF0C;&#x90FD;&#x6709;&#x7C7B;&#x578B;&#x4E3A;T2&#x7684;&#x5BF9;&#x8C61;o2&#xFF0C;&#x4F7F;&#x5F97;&#x4EE5;T1&#x5B9A;&#x4E49;&#x7684;&#x6240;&#x6709;&#x7A0B;&#x5E8F;P&#x5728;&#x6240;&#x6709;&#x7684;&#x5BF9;&#x8C61;o1&#x90FD;&#x6362;&#x6210;o2&#x65F6;&#xFF0C;&#x7A0B;&#x5E8F;P&#x7684;&#x884C;&#x4E3A;&#x6CA1;&#x6709;&#x53D8;&#x5316;&#xFF0C;&#x90A3;&#x4E48;&#x7C7B;&#x578B;T2&#x662F;&#x7C7B;&#x578B;T1&#x7684;&#x5B50;&#x7C7B;&#x578B;&#x3002;</li>
+<li>&#x901A;&#x4FD7;&#x7684;&#x5B9A;&#x4E49;&#xFF1A;&#x6240;&#x6709;&#x5F15;&#x7528;&#x57FA;&#x7C7B;&#x7684;&#x5730;&#x65B9;&#x5FC5;&#x987B;&#x80FD;&#x900F;&#x660E;&#x5730;&#x4F7F;&#x7528;&#x5176;&#x5B50;&#x7C7B;&#x7684;&#x5BF9;&#x8C61;&#x3002;</li>
+<li>&#x66F4;&#x901A;&#x4FD7;&#x7684;&#x5B9A;&#x4E49;&#xFF1A;&#x5B50;&#x7C7B;&#x53EF;&#x4EE5;&#x6269;&#x5C55;&#x7236;&#x7C7B;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x4F46;&#x4E0D;&#x80FD;&#x6539;&#x53D8;&#x7236;&#x7C7B;&#x539F;&#x6709;&#x7684;&#x529F;&#x80FD;&#x3002;</li>
+</ul>
+<p>&#x91CC;&#x6C0F;&#x66FF;&#x6362;&#x539F;&#x5219;&#x5305;&#x542B;&#x4EE5;&#x4E0B;4&#x5C42;&#x542B;&#x4E49;&#xFF1A;</p>
+<ul>
+<li>&#x5B50;&#x7C7B;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x7236;&#x7C7B;&#x7684;&#x62BD;&#x8C61;&#x65B9;&#x6CD5;&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x80FD;&#x8986;&#x76D6;&#x7236;&#x7C7B;&#x7684;&#x975E;&#x62BD;&#x8C61;&#x65B9;&#x6CD5;&#x3002;</li>
+<li>&#x5B50;&#x7C7B;&#x4E2D;&#x53EF;&#x4EE5;&#x589E;&#x52A0;&#x81EA;&#x5DF1;&#x7279;&#x6709;&#x7684;&#x65B9;&#x6CD5;&#x3002;</li>
+<li>&#x5F53;&#x5B50;&#x7C7B;&#x8986;&#x76D6;&#x6216;&#x5B9E;&#x73B0;&#x7236;&#x7C7B;&#x7684;&#x65B9;&#x6CD5;&#x65F6;&#xFF0C;&#x65B9;&#x6CD5;&#x7684;&#x524D;&#x7F6E;&#x6761;&#x4EF6;&#xFF08;&#x5373;&#x65B9;&#x6CD5;&#x7684;&#x5F62;&#x53C2;&#xFF09;&#x8981;&#x6BD4;&#x7236;&#x7C7B;&#x65B9;&#x6CD5;&#x7684;&#x8F93;&#x5165;&#x53C2;&#x6570;&#x66F4;&#x5BBD;&#x677E;&#x3002;</li>
+<li>&#x5F53;&#x5B50;&#x7C7B;&#x7684;&#x65B9;&#x6CD5;&#x5B9E;&#x73B0;&#x7236;&#x7C7B;&#x7684;&#x62BD;&#x8C61;&#x65B9;&#x6CD5;&#x65F6;&#xFF0C;&#x65B9;&#x6CD5;&#x7684;&#x540E;&#x7F6E;&#x6761;&#x4EF6;&#xFF08;&#x5373;&#x65B9;&#x6CD5;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#xFF09;&#x8981;&#x6BD4;&#x7236;&#x7C7B;&#x66F4;&#x4E25;&#x683C;&#x3002;</li>
+</ul>
+<blockquote>
+<p>&#x91C7;&#x7528;&#x91CC;&#x6C0F;&#x66FF;&#x6362;&#x539F;&#x5219;&#x7684;&#x76EE;&#x7684;&#x5C31;&#x662F;&#x589E;&#x5F3A;&#x7A0B;&#x5E8F;&#x7684;&#x5065;&#x58EE;&#x6027;&#xFF0C;&#x7248;&#x672C;&#x5347;&#x7EA7;&#x65F6;&#x4E5F;&#x53EF;&#x4EE5;&#x4FDD;&#x6301;&#x975E;&#x5E38;&#x597D;&#x7684;&#x517C;&#x5BB9;&#x6027;&#x3002;&#x5373;&#x4F7F;&#x589E;&#x52A0;&#x5B50;&#x7C7B;&#xFF0C;&#x539F;&#x6709;&#x7684;&#x5B50;&#x7C7B;&#x8FD8;&#x53EF;&#x4EE5;&#x7EE7;&#x7EED;&#x8FD0;&#x884C;&#x3002;&#x5728;&#x5B9E;&#x9645;&#x9879;&#x76EE;&#x4E2D;&#xFF0C;&#x6BCF;&#x4E2A;&#x5B50;&#x7C7B;&#x5BF9;&#x5E94;&#x4E0D;&#x540C;&#x7684;&#x4E1A;&#x52A1;&#x542B;&#x4E49;&#xFF0C;&#x4F7F;&#x7528;&#x7236;&#x7C7B;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#xFF0C;&#x4F20;&#x9012;&#x4E0D;&#x540C;&#x7684;&#x5B50;&#x7C7B;&#x5B8C;&#x6210;&#x4E0D;&#x540C;&#x7684;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x3002;</p>
+<p>&#x91CC;&#x6C0F;&#x66FF;&#x6362;&#x539F;&#x5219;&#x4E3A;&#x826F;&#x597D;&#x7684;&#x7EE7;&#x627F;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x89C4;&#x8303;&#x3002;</p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="srp.html" class="navigation navigation-prev " aria-label="Previous page: 单一职责原则">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="dip.html" class="navigation navigation-next " aria-label="Next page: 依赖倒置原则">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"里氏替换原则","level":"1.2.2","depth":2,"next":{"title":"依赖倒置原则","level":"1.2.3","depth":2,"path":"principle/dip.md","ref":"principle/dip.md","articles":[]},"previous":{"title":"单一职责原则","level":"1.2.1","depth":2,"path":"principle/srp.md","ref":"principle/srp.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"设计模式","language":"zh-hans","gitbook":"*","description":""},"file":{"path":"principle/lsp.md","mtime":"2018-01-10T02:53:22.356Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-10T02:54:23.447Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
