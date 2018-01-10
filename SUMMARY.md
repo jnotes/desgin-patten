@@ -8,6 +8,7 @@
   * [接口隔离原则](principle/isp.md)
   * [迪米特法则](principle/lod.md)
   * [开闭原则](principle/ocp.md)
+  * [组合/聚合复用原则](principle/carp.md)
 * [创建类模式](creater/README.md)
   * [单例模式](creater/singleton.md)
   * [简单工厂](creater/simple-factory.md)
